@@ -1,35 +1,159 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
-    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+/* normal text */
+html {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #181818;
 }
 
-* {
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 0.35em;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-weight: 900;
+}
+
+h5 {
+  font-size: 0.85rem;
+  font-weight: 900;
+}
+
+h6 {
+  font-size: 0.75rem;
+  font-weight: 900;
+}
+
+p {
+  margin: 0 0 1.15em;
+}
+
+p + h2 {
+  margin-top: 1.5em;
+}
+
+
+/* bold */
+strong {
+  font-weight: 900;
+}
+
+/* italic */
+em {
+  font-style: italic;
+}
+
+/* 인용 출처 시작 */
+cite {
+  font-style: normal;
+  opacity: 0.65;
+  font-size: 0.9rem;
+}
+
+cite::before {
+  content: "-";
+  margin-right: 3px;
+}
+/* 인용 출처 끝 */
+
+/* inline-quote */
+mark {
   box-sizing: border-box;
+  padding: 0 2px;
+  border: 1px solid darkgray;
+  font-size: 0.9em;
+  color: #666;
+  background-color: lightgray;
 }
 
-main {
-  padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+/* underline */
+.underline {
+  text-decoration: underline;
 }
 
-code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-family: Menlo, Monaco, Lucida Console, Courier New, monospace;
+/* strikethrough */
+.strike {
+  text-decoration: line-through;
 }
+
+/* inline link 시작 */
+a {
+  display: inline-block;
+  color: yellowgreen;
+}
+
+a::after {
+  content: "🔗";
+  margin-left: 3px;
+}
+/* inline link 끝 */
 
 .container {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 24px;
 }
+
+header {
+  background-color: goldenrod;
+  color: #fff;
+}
+
+body > footer {
+  border-top: 2px solid goldenrod;
+}
+
+blockquote {
+  background: palegoldenrod;
+  color: olive;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 1em;
+}
+
+/* block link 시작 */
+.link {
+  display: flex;
+}
+
+.link > a {
+  display: inline-block;
+  padding: .8rem 1rem;
+  background-color: gold;
+  font-weight: 900;
+  font-size: 1.25rem;
+  color: #181818;
+  text-align: center;
+  text-decoration: none;
+}
+
+.link > a::after {
+  content: none;
+}
+
+@media (max-width: 420px) {
+  .link {
+    justify-content: center;
+  }
+  
+  .link > a {
+    width: 100%;
+  }
+}
+/* block link 끝 */
