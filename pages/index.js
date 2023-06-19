@@ -12,10 +12,7 @@ export default function Home() {
       <div className="container">
         <h1>가나다라 마바사</h1>
         <p>
-          <small
-            >By <em>Stephanie Eckles</em> | Posted on:
-            <em>02/02/2020</em></small
-          >
+          <small>By <em>Stephanie Eckles</em> | Posted on: <em>02/02/2020</em></small>
         </p>
       </div>
     </header>
