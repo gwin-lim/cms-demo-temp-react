@@ -8,7 +8,11 @@
     "export": "next export"
   },
   "dependencies": {
+    "@portabletext/react": "^3.0.3",
+    "@portabletext/to-html": "^2.0.0",
+    "@sanity/client": "^6.1.3",
     "cypress": "^10.0.3",
+    "groq": "^3.12.2",
     "next": "^12.1.5",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"

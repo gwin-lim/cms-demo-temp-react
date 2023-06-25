@@ -8,6 +8,8 @@ html {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 0.35em;
+  word-wrap: break-word;
+  word-break: keep-all;
 }
 
 h1 {
@@ -110,9 +112,23 @@ a::after {
   padding: 24px;
 }
 
+
 header {
   background-color: goldenrod;
+  min-height: 320px;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: #fff;
+  gap: 20px;
+}
+
+header > * {
+  background-color: goldenrod;
 }
 
 body > footer {
@@ -157,3 +173,27 @@ blockquote {
   }
 }
 /* block link 끝 */
+
+.a11y-hidden {
+  overflow: hidden;
+  position: absolute;
+  clip:     rect(0,0,0,0);
+  width:    1px;
+  height:   1px;
+  margin:   -1px;
+  border:   0;
+  padding:  0;
+}
+
+.container.main-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container.main-text > img {
+  width: 100%;
+  max-width: 512px;
+  margin-left: auto;
+  margin-right: auto;
+}
