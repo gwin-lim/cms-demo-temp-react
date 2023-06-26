@@ -18,8 +18,7 @@ export default function Home() {
       <h1>데모 블로그</h1>
     </header>
     <ul>
-
-      {posts.map(({
+      {posts.length > 0 ?posts.map(({
         title,
         slug,
         releasedAt,
@@ -36,7 +35,7 @@ export default function Home() {
         return <li key={`post-${_id}`}>
           <h2><a href={`/posts/${slug?.current}/`}>{title} - {dateTimeStr}</a></h2>
         </li>
-      })}
+      }): <h2>now loading...</h2>}
     </ul>
     </>
   )
