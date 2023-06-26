@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import { useRouter } from 'next/router'
 import { useEffect, useMemo, useState } from 'react'
 import PortableText from '@components/PortableText'
 
